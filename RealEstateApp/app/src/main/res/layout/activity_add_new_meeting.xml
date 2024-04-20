@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.addAsset"
+    android:background="@drawable/lightbluebackground"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/LLC_LBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addNewMeeting_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Meeting"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:paddingBottom="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="60dp"
+            android:paddingTop="15dp"
+            >
+        </com.google.android.material.textview.MaterialTextView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_below="@id/LLC_LBL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                android:textColorHint="@color/black"
+                android:inputType="text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTimeAndInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Time and info"
+                android:textColorHint="@color/black"
+                android:inputType="text" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSetMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Meeting" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

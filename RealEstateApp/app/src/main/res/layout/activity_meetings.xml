@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MeetingsActivity"
+    android:background="@drawable/lightbluebackground">
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/addNewMeeting_TXT"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Meetings For Asset"
+    android:textStyle="bold"
+    android:textSize="40sp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:paddingTop="15dp">
+</com.google.android.material.textview.MaterialTextView>
+    <CalendarView
+        android:id="@+id/calenderView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+
+        >
+
+    </CalendarView>
+    <FrameLayout
+        android:id="@+id/allMeetings_FRAME"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:background="@android:color/transparent"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/noMeeting_LBL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No meeting"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center">
+        </com.google.android.material.textview.MaterialTextView>
+
+    </FrameLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddNewMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new meeting"
+        android:layout_margin="16dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

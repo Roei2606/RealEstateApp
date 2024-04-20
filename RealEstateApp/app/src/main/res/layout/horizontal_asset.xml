@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/pic_width"
+        android:layout_height="@dimen/pic_height"
+        android:elevation="@dimen/pic_elevation"
+        app:cardCornerRadius="@dimen/pic_corner_radius"
+        app:cardElevation="@dimen/pic_elevation"
+        android:layout_marginVertical="@dimen/pic_vertical_margin"
+        android:layout_marginStart="@dimen/pic_vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/asset_CARD_data"
+        app:layout_constraintStart_toStartOf="@id/asset_CARD_data"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/asset_IMG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_launcher_background" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/asset_CARD_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/data_start_margin"
+        android:layout_marginEnd="@dimen/data_end_margin"
+        android:layout_marginVertical="@dimen/data_end_margin"
+        android:elevation="@dimen/data_elevation"
+        app:cardCornerRadius="@dimen/pic_corner_radius"
+        app:cardElevation="@dimen/data_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/data_end_margin"
+            android:layout_marginStart="@dimen/data_start_margin">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/city_LBL_asset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/data_end_margin"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:textSize="@dimen/data_text_size"
+                tools:text="City" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/street_LBL_asset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/city_LBL_asset"
+                android:layout_alignStart="@id/city_LBL_asset"
+                android:layout_alignEnd="@id/asset_BTN_bookMeeting"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="2"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                tools:text="Street" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/asset_BTN_bookMeeting"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar"
+                android:contentDescription="Book Meeting"
+                android:layout_below="@id/city_LBL_asset"
+                android:layout_alignEnd="@id/city_LBL_asset"
+                android:layout_marginBottom="5dp"
+                android:background="@color/transparent"
+                android:textSize="@dimen/data_text_size"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/asse_BTN_delete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bin"
+                android:contentDescription="Book Meeting"
+                android:layout_marginRight="3dp"
+                android:layout_below="@id/asset_BTN_bookMeeting"
+                android:layout_alignEnd="@id/rentOrSale_LBL_asset"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:background="@color/transparent"
+                android:textSize="@dimen/data_text_size"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/floor_LBL_asset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/street_LBL_asset"
+                android:layout_alignStart="@id/city_LBL_asset"
+                android:layout_alignEnd="@id/asset_BTN_bookMeeting"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="2"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                tools:text="floor" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rentOrSale_LBL_asset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/floor_LBL_asset"
+                android:layout_alignStart="@id/city_LBL_asset"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="3"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:text="rent or sale">
+            </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/price_LBL_asset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rentOrSale_LBL_asset"
+                android:layout_alignStart="@id/city_LBL_asset"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="3"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:text="Price">
+            </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/asset_LBL_moreInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_LBL_asset"
+                android:layout_alignStart="@id/city_LBL_asset"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="3"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                tools:text="Owner details" />
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
